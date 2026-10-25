@@ -1,0 +1,60 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Never paste tokens, passwords or Steam Guard codes** — BuildPort redacts
+        them from its own log, but check what you paste anyway.
+  - type: input
+    id: version
+    attributes:
+      label: BuildPort version
+      description: Shown in the top-right corner of the app, or `buildport --version`.
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Desktop app or CLI
+      options:
+        - Desktop app
+        - CLI
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11 23H2
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: Store / target
+      multiple: true
+      options:
+        - Steam
+        - VK Play
+        - RTGames
+        - SFTP
+        - Yandex.Disk
+        - Google Drive
+        - exec
+        - Not target-specific
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: The log from the app (Copy log) or the CLI output. Remove anything private.
+      render: text

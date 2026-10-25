@@ -1,0 +1,16 @@
+name: Feature request
+description: A store, option or workflow BuildPort does not support yet
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The release workflow you have today and where BuildPort gets in the way or falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help
+      description: The store, option or behaviour you have in mind. Links to the store's upload docs help.
