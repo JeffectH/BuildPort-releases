@@ -2,6 +2,16 @@
 
 All notable changes to BuildPort. Versions follow [Semantic Versioning](https://semver.org).
 
+## [0.2.0] - 2026-11-20
+
+### Added
+
+- Per-target Steam upload profiles.
+
+### Fixed
+
+- Unity builds no longer fail validation because of a leftover `steam_appid.txt`.
+
 ## [0.1.0] - 2026-10-25
 
 First public release.
